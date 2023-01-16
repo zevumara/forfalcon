@@ -142,7 +142,7 @@ class recordsController extends Controller
 			$this->view->p_idCategory = $this->getPostInt('idCategory');
 		}
 		
-		$this->view->p_language = $record['language'];		
+		$this->view->p_language = $record['language'];
 		if ($this->getPost('language')) {
 			$this->view->p_language = $this->getPost('language');
 		}
