@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="<?php echo $this->getLibPath(); ?>bootstrap-5.2.3-dist/css/bootstrap.min.css">
+		<title><?php if (isset($this->title)){ echo $this->title; } ?></title>
+    </head>
+	<body class="bg-light">
+		<main class="container py-5">
+            <div class="text-center">
+                <h1><?php echo $this->__localization['CONTENT_MANAGEMENT_SYSTEM']; ?></h1>
+                <p class="lead"><?php echo $this->__localization['IN_A_SINGLE_STEP']; ?></p>
+            </div>
+
+            <div class="py-4">
+                <?php if (isset($this->_warning)): ?>
+                <div class="alert alert-warning alert-dismissible fade show shadow" role="alert">
+                    <?php echo $this->_warning; ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <?php endif; ?>
+                <?php if (isset($this->_error)): ?>
+                <div class="alert alert-danger alert-dismissible fade show shadow" role="alert">
+                    <?php echo $this->_error; ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <?php endif; ?>
+            </div>
+
+            <h4 class="mb-4"><?php echo $this->__localization['DATABASE']; ?></h4>
+
+            <form role="form" action="" method="post">
+                <input type="hidden" name="start_installation" value="1" />
+                
+                <div class="row g-3 pb-5">
+                    <div class="col-sm-6">
+                        <label for="dbHostInputText"><?php echo $this->__localization['HOST']; ?></label>
+                        <input type="text" name="DB_HOST" id="dbHostInputText" class="form-control" value="<?php echo $this->db_host; ?>" autocomplete="off" required>
+                        <small class="text-muted"><?php echo $this->__localization['HOST_DESCRIPTION']; ?></small>
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="dbPrefixInputText"><?php echo $this->__localization['PREFIX']; ?></label>
+                        <input type="text" name="DB_PREFIX" id="dbPrefixInputText" class="form-control" value="<?php echo $this->db_prefix; ?>" autocomplete="off">
+                        <small class="text-muted"><?php echo $this->__localization['PREFIX_DESCRIPTION']; ?></small>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="dbNameInputText"><?php echo $this->__localization['DATABASE_NAME']; ?></label>
+                        <input type="text" name="DB_NAME" id="dbNameInputText" class="form-control" value="<?php echo $this->db_name; ?>" autocomplete="off" required>
+                        <small class="text-muted"><?php echo $this->__localization['DATABASE_NAME_DESCRIPTION']; ?></small>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="dbUserInputText"><?php echo $this->__localization['DATABASE_USERNAME']; ?></label>
+                        <input type="text" name="DB_USER" id="dbUserInputText" class="form-control" value="<?php echo $this->db_user; ?>" autocomplete="off" required>
+
+                    </div>
+                    <div class="col-md-4">
+                        <label for="dbPasswordInputText"><?php echo $this->__localization['DATABASE_PASSWORD']; ?></label>
+                        <input type="text" name="DB_PASSWORD" id="dbPasswordInputText" class="form-control" value="<?php echo $this->db_password; ?>" autocomplete="off" required>
+
+                    </div>
+
+                    <h4 class="pt-3"><?php echo $this->__localization['CONFIGURATION']; ?></h4>
+
+                    <div class="col-md-6">
+                        <label for="rootUrlInputText"><?php echo $this->__localization['WEBSITE_URL']; ?></label>
+                        <input type="text" name="root_url" id="rootUrlInputText" class="form-control" value="<?php echo $this->root_url; ?>" autocomplete="off" required>
+                        <small class="text-muted"><?php echo $this->__localization['WEBSITE_URL_DESCRIPTION']; ?></small>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="websiteInputText"><?php echo $this->__localization['WEBSITE_NAME']; ?></label>
+                        <input type="text" name="website" id="websiteInputText" class="form-control" value="<?php echo $this->website; ?>" autocomplete="off" required>
+                        <small class="text-muted"><?php echo $this->__localization['WEBSITE_NAME_DESCRIPTION']; ?></small>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <label for="usernameInputText"><?php echo $this->__localization['ADMINISTRATOR_USERNAME']; ?></label>
+                        <input type="text" name="username" id="usernameInputText" class="form-control" value="<?php echo $this->username; ?>" autocomplete="off" required>
+                        <small class="text-muted"><?php echo $this->__localization['ADMINISTRATOR_USERNAME_DESCRIPTION']; ?></small>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="passwordInputPassword"><?php echo $this->__localization['ADMINISTRATOR_PASSWORD']; ?></label>
+                        <input type="text" name="password" id="passwordInputPassword" class="form-control" value="<?php echo $this->password; ?>" autocomplete="off" required>
+                        <small class="text-muted"><?php echo $this->__localization['ADMINISTRATOR_PASSWORD_DESCRIPTION']; ?></small>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <label for="nameInputText"><?php echo $this->__localization['ADMINISTRATOR_NAME']; ?></label>
+                        <input type="text" name="name" id="nameInputText" class="form-control" value="<?php echo $this->name; ?>" autocomplete="off" required>
+                        <small class="text-muted"><?php echo $this->__localization['ADMINISTRATOR_NAME_DESCRIPTION']; ?></small>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="emailInputText"><?php echo $this->__localization['ADMINISTRATOR_EMAIL']; ?></label>
+                        <input type="text" name="email" id="emailInputText" class="form-control" value="<?php echo $this->email; ?>" autocomplete="off" required>
+                        <small class="text-muted"><?php echo $this->__localization['ADMINISTRATOR_EMAIL_DESCRIPTION']; ?></small>
+                    </div>
+                </div>
+
+				<button type="submit" class="w-100 btn btn-primary btn-lg shadow" type="submit"><?php echo $this->__localization['INSTALL']; ?></button>
+            </form>
+        </main>
+        <script src="<?php echo $this->getLibPath(); ?>bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

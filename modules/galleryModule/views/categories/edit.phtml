@@ -1,0 +1,30 @@
+                <main class="container-fluid p-5">
+                    <?php $this->showMessages(); ?>
+
+                    <small class=""><?php echo $this->__localization['Categories']; ?> > <?php echo $this->title; ?></small>
+                    <h1 class="pb-3"><?php echo $this->title; ?></h1>
+                    
+                    <form role="form" action="" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="save" value="1">
+                        <?php $this->inputHidden('id'); ?>
+                        <?php $this->inputText('name', $this->__localization['Name'], 'required'); ?>
+                        <div class="pb-3">
+                            <div class="form-check">
+                                <input name="active" value="1" class="form-check-input" type="checkbox" id="activeCheck" <?php if ($this->p_active) echo 'checked'; ?>>
+                                <label class="form-check-label" for="activeCheck">
+                                    <?php echo $this->__localization['ACTIVE_RECORD']; ?>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="pb-3 d-none">
+                            <label for="translateInputText"><?php echo $this->__localization['LANGUAGE']; ?></label>
+                            <select name="language" class="form-control" id="translateInputText" disabled>
+                                <option value="es_ES" <?php if ($this->p_language == 'es_ES') echo 'selected'; ?>>Español</option>
+                                <option value="en_US" <?php if ($this->p_language == 'en_US') echo 'selected'; ?>>English</option>
+                            </select>
+                        </div>
+                        <div class="pt-3">
+                            <button type="submit" class="btn btn-primary btn-lg shadow"><?php echo $this->__localization['SAVE']; ?></button>
+                        </div>
+                    </form>
+                </main>

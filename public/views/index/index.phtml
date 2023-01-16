@@ -1,0 +1,106 @@
+        <div class="container py-4" id="index">
+            <div class="p-5 mb-4 bg-dark-opacity rounded-3">
+                <div class="container-fluid py-5 text-white text-center">
+                    <h1 class="display-5 fw-bold">Hi, my name is Sebastián Cámara.<br>I make pixel-art.</h1>
+                    <p class="fs-4 lh-base">I'm open to new job opportunities.<br> What can I do for you?</p>
+                    <a class="btn btn-secondary" href="#portfolio" role="button">Portfolio</a>
+                    <a class="btn btn-secondary" href="#commissions" role="button">Commisions</a>
+                </div>
+            </div>
+
+            <div class="row align-items-md-stretch">
+                <div class="col-md-6" id="becomeAPatreon">
+                    <div class="h-100 p-5 text-white bg-red1-opacity rounded-3">
+                        <h2 class="highlight">Become a Patreon</h2>
+                        <p><strong>I'm making a big collection of pixel-art assets for RPG Maker and indie RPGs. Help me achieve it!</strong></p>
+                        <a class="btn btn-danger" href="http://patreon.com/hitaitaro" role="button"><strong>Support me on Patreon</strong></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="h-100 p-5 text-white bg-red1-opacity rounded-3">
+                        <h2 class="highlight1">Sign up Newsletter</h2>
+                        <p>I will send you free resources and keep up to date on what I am working on. I promise I will not spam you.</p>
+                        <form id="newsletterForm" role="form" action="./" method="post">
+                            <div class="row g-3">
+                                <div class="col-sm">
+                                    <input type="text" name="nickname" class="form-control" placeholder="Nickname" aria-label="Name" id="inputName" required>
+                                </div>
+                                <div class="col-sm-5">
+                                    <input type="email" name="email" class="form-control" placeholder="E-mail" aria-label="E-mail" id="inputEmail" required>
+                                </div>
+                                <div class="col-sm">
+                                    <button type="submit" id="suscribe" class="btn btn-light">Suscribe</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div id="newsletterMessage">
+                            <span class="highlight">You've been added to the mailing list. Thank you!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container py-4" id="portfolio">
+            <div class="p-3 rounded-3 bg-dark-opacity">
+                <div class="container-fluid py-3 text-white">
+                    <!-- Gallery -->
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                            <a href="<?php echo $this->getImgPath(); ?>portfolio/theelvendungeon.png" data-fancybox="gallery">
+                                <img src="<?php echo $this->getImgPath(); ?>portfolio/theelvendungeon.png" class="w-100 shadow-1-strong rounded mb-4" alt="" />
+                            </a>
+                            <a href="<?php echo $this->getImgPath(); ?>portfolio/thereturnofalexscreenshot.gif" data-fancybox="gallery">
+                                <img src="<?php echo $this->getImgPath(); ?>portfolio/thereturnofalexscreenshot.gif" class="w-100 shadow-1-strong rounded mb-4" alt="" />
+                            </a>
+                            <a href="<?php echo $this->getImgPath(); ?>portfolio/starwars.jpg" data-fancybox="gallery">
+                                <img src="<?php echo $this->getImgPath(); ?>portfolio/starwars.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="" />
+                            </a>
+                        </div>
+                        <div class="col-lg-4 mb-4 mb-lg-0">
+                            <a href="<?php echo $this->getImgPath(); ?>portfolio/thereturnofalex.gif" data-fancybox="gallery">
+                                <img src="<?php echo $this->getImgPath(); ?>portfolio/thereturnofalex.gif" class="w-100 shadow-1-strong rounded mb-4" alt="" />
+                            </a>
+                            <a href="<?php echo $this->getImgPath(); ?>portfolio/akuma.png" data-fancybox="gallery">
+                                <img src="<?php echo $this->getImgPath(); ?>portfolio/akuma.png" class="w-100 shadow-1-strong rounded mb-4" alt="" />
+                            </a>
+                            <a href="<?php echo $this->getImgPath(); ?>portfolio/retrodungeontiles.png" data-fancybox="gallery">
+                                <img src="<?php echo $this->getImgPath(); ?>portfolio/retrodungeontiles.png" class="w-100 shadow-1-strong rounded mb-4" alt="" />
+                            </a>
+                        </div>
+                        <div class="col-lg-4 mb-4 mb-lg-0">
+                            <a href="<?php echo $this->getImgPath(); ?>portfolio/thesaintsofredemption.png" data-fancybox="gallery">
+                                <img src="<?php echo $this->getImgPath(); ?>portfolio/thesaintsofredemption.png" class="w-100 shadow-1-strong rounded mb-4" alt="" />
+                            </a>
+                            <a href="<?php echo $this->getImgPath(); ?>portfolio/thereturnofalexbattle.gif" data-fancybox="gallery">
+                                <img src="<?php echo $this->getImgPath(); ?>portfolio/thereturnofalexbattle.gif" class="w-100 shadow-1-strong rounded mb-4" alt="" />
+                            </a>
+                            <a href="<?php echo $this->getImgPath(); ?>portfolio/babayaga.jpg" data-fancybox="gallery">
+                                <img src="<?php echo $this->getImgPath(); ?>portfolio/babayaga.jpg" class="w-100 shadow-1-strong rounded mb-4" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Gallery -->
+                </div>
+            </div>
+        </div>
+
+        <div class="container py-4" id="commissions">
+            <div class="p-5 mb-4 rounded-3 text-white bg-red1-opacity border fs-5 lh-lg">
+                <div class="container-fluid py-5">
+                    <h1 class="display-5">About commisions</h1>
+                    <p class="highlight">My current baseline rate is $15 USD per hour.</p>
+                    <p>Kind of work in which I'm more experienced:</p>
+                    <ul>
+                        <li>Tilesets</li>
+                        <li>Characters</li>
+                        <li>Animations</li>
+                        <li>Backgrounds</li>
+                        <li>Icons</li>
+                        <li>Portraits</li>
+                    </ul>
+                    <p class="fs-4 lh-base highlight" id="contact">You can contact me via <a href="mailto:sebastian@hitaitaro.com" class="link-light">E-mail</a>,
+                        <a href="http://twitter.com/HITAITARO" class="link-light">Twitter</a> or <a href="http://patreon.com/hitaitaro" class="link-light">Patreon</a>.</p>
+                </div>
+            </div>
+        </div>

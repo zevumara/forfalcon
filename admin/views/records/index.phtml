@@ -1,0 +1,69 @@
+                <main class="container-fluid p-5">
+					<small class=""><?php echo $this->title; ?> > <?php echo $this->__localization['LIST_OF_MODULES']; ?></small>
+					<h1 class="pb-3"><?php echo $this->title; ?></h1>
+					<div class="input-group mb-3">
+						<span class="input-group-text" id="basic-addon1"><?php echo $this->__localization['FILTER']; ?>...</span>
+                        <input class="form-control" type="search" aria-label="Search" id="searchInput">
+					</div>
+			
+                    <div class="table-responsive">
+                        <table id="sortable" class="table table-hover">
+                            <caption><span id="count"><?php echo count($this->modules) + count($this->modulesNotInstalled); ?></span> <?php echo $this->__localization['RECORDS_FOUNDED']; ?></caption>
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col"><?php echo $this->__localization['Name']; ?></th>
+                                    <th scope="col"><?php echo $this->__localization['Status']; ?></th>
+                                    <th scope="col" width="40%"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php if ($this->modules): ?>
+                                <?php foreach ($this->modules as $module): ?>
+                                <tr>
+                                    <td><?php echo ucfirst($module['name']); ?></td>
+                                    <td scope="col"><span class="badge text-bg-success"><?php echo $this->__localization['Connected']; ?></span></td>
+                                    <td style="text-align: right;">
+                                        <form action="<?php echo URL . 'module/' .  $module['name'] . '/install/uninstall/'; ?>" method="post">
+                                            <input type="hidden" name="id" value="<?php echo $module['id']; ?>">
+                                            <button type="submit" class="btn btn-outline-secondary" style="min-width: 160px"><i class="bi bi-database-dash"></i> Uninstall</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <?php endforeach; ?>
+                                <?php endif; ?>
+                                <?php if ($this->modulesNotInstalled): ?>
+                                <?php foreach ($this->modulesNotInstalled as $moduleName): ?>
+                                <tr>
+                                    <td><?php echo ucfirst($moduleName); ?></td>
+                                    <td scope="col"><span class="badge text-bg-danger"><?php echo $this->__localization['Disconnected']; ?></span></td>
+                                    <td style="text-align: right;">
+                                        <form action="<?php echo URL . 'module/' .  $moduleName . '/install/install/'; ?>" method="post">
+                                            <input type="hidden" name="name" value="<?php echo $moduleName; ?>">
+                                            <button type="submit" class="btn btn-primary" style="min-width: 160px"><i class="bi bi-database-fill-add"></i> Install</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <?php endforeach; ?>
+                                <?php endif; ?>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Vertically centered modal -->
+                    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle"><?php echo $this->__localization['DELETE_RECORD']; ?></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <?php echo $this->__localization['CONFIRM_DELETE_RECORD']; ?>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn" data-bs-dismiss="modal"><?php echo $this->__localization['CANCEL']; ?></button>
+                                <a href="#" id="deleteById" class="btn btn-danger upload"><?php echo $this->__localization['DELETE']; ?></a>
+                            </div>
+                            </div>
+                        </div>
+                    </div>

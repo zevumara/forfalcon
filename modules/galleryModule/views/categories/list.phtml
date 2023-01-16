@@ -1,0 +1,53 @@
+                <main class="container-fluid p-5">
+					<small class=""><?php echo $this->__localization['Gallery']; ?> > <?php echo $this->title; ?></small>
+					<h1 class="pb-3"><?php echo $this->title; ?></h1>
+					<div class="input-group mb-3">
+						<span class="input-group-text" id="basic-addon1"><?php echo $this->__localization['FILTER']; ?>...</span>
+                        <input class="form-control" type="search" aria-label="Search" id="searchInput">
+					</div>
+			
+                    <div class="table-responsive">
+                        <table id="sortable" class="table table-hover">
+                            <caption><span id="count"><?php echo count($this->records); ?></span> <?php echo $this->__localization['RECORDS_FOUNDED']; ?></caption>
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col" width="6%">Id</th>
+                                    <th scope="col"><?php echo $this->__localization['Name']; ?></th>
+                                    <th scope="col" width="40%"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php if ($this->records): ?>
+                                <?php foreach ($this->records as $record): ?>
+                                <tr id="foo_<?php echo $record['id']; ?>">
+                                    <th class="link"><?php echo $record['id']; ?></th>
+                                    <td class="link"><?php echo $record['name']; ?></td>
+                                    <td style="text-align: right;">
+                                        <a href="<?php echo URL; ?>module/gallery/categories/delete/<?php echo $record['id']; ?>/" class="btn delete-item" data-bs-toggle="modal" data-bs-target="#deleteModal"><i class="bi bi-trash"></i> </a>
+                                        <a href="<?php echo URL; ?>module/gallery/categories/edit/<?php echo $record['id']; ?>/" class="btn btn-primary"><i class="bi bi-pencil"></i> Edit</a>
+                                    </td>
+                                </tr>
+                                <?php endforeach; ?>
+                                <?php endif; ?>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Vertically centered modal -->
+                    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle"><?php echo $this->__localization['DELETE_RECORD']; ?></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <?php echo $this->__localization['CONFIRM_DELETE_RECORD']; ?>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn" data-bs-dismiss="modal"><?php echo $this->__localization['CANCEL']; ?></button>
+                                <a href="#" id="deleteById" class="btn btn-danger upload"><?php echo $this->__localization['DELETE']; ?></a>
+                            </div>
+                            </div>
+                        </div>
+                    </div>

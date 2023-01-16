@@ -1,0 +1,18 @@
+<?php if ($this->total_pages): ?>
+
+<ul class="pagination">
+	<li <?php if (!$this->prev_page) echo 'class="disabled"'; ?>><a href="#" <?php if ($this->prev_page) echo 'class="page-number" data-page-number="' . $this->prev_page . '"'; ?>><</a></li>
+	<?php for ($i = 1; $i <= $this->total_pages; $i++): ?>
+	
+	<?php if ($this->current_page == $i): ?>
+	<li class="active"><a href="#" class="page-number" data-page-number="<?php echo $i; ?>"><?php echo $i; ?></a></li>
+	<?php else: ?>
+	<li><a href="#" class="page-number" data-page-number="<?php echo $i; ?>"><?php echo $i; ?></a></li>
+	<?php endif; ?>
+	
+	<?php endfor; ?>
+	<li <?php if (!$this->next_page) echo 'class="disabled"'; ?>><a href="#" <?php if ($this->next_page) echo 'class="page-number" data-page-number="' . $this->next_page . '"'; ?>>></a></li>
+</ul>
+
+<?php endif; ?>
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+		<title><?php if (isset($this->title)){ echo $this->title; } ?></title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
+		<link href="<?php echo $this->getCssPath(); ?>styles.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="container-fluid vh-100 d-flex align-items-center bg-light">
+			<div class="w-100 m-auto" style="max-width: 1000px">
+                <form role="form" action="" method="post">
+                    <input type="hidden" name="login" value="1" />
+					<div class="p-4 pt-2 text-center">
+						<h1>Forfalcon</h1>
+                        <?php if (isset($this->_error)): ?>
+                        <div class="alert alert-danger" role="alert">
+                            <?php echo $this->_error; ?>
+                        </div>
+                        <?php endif; ?>
+						<div class="input-group mb-2">
+                            <input type="text" name="username" class="form-control" placeholder="<?php echo $this->__localization['USERNAME']; ?>" required autofocus>
+            
+						</div>
+						<div class="input-group mb-2">
+                            <input type="password" name="password" class="form-control" placeholder="<?php echo $this->__localization['PASSWORD']; ?>" required>
+						</div>
+						<div class="input-group">
+							<button class="btn btn-primary text-center w-100" type="submit"><?php echo $this->__localization['SIGN_IN']; ?></button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="<?php echo $this->getJsPath(); ?>scripts.js"></script>
+	</body>
+</html>

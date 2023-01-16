@@ -1,0 +1,53 @@
+        <div class="container py-4" id="dungeonpack">
+            <div class="p-5 mb-4 bg-dark-opacity rounded-3">
+                <div class="container-fluid py-5 text-white text-center">
+                    <?php if (isset($this->_success)): ?>
+                    <p class="fs-4 lh-base"><?php echo $this->_success; ?></p>
+                    <?php else: ?>	
+                    <h1 class="display-5 fw-bold">Dungeon Pack #1: The Return of Alex</h1>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">   
+                            <a href="<?php echo $this->getImgPath(); ?>dungeonpack1/dungeon_pack_gif2.gif" data-fancybox="gallery">
+                                <img src="<?php echo $this->getImgPath(); ?>dungeonpack1/dungeon_pack_gif2.gif" class="w-100 shadow-1-strong rounded mb-4" alt="" />
+                            </a>
+                            <a href="<?php echo $this->getImgPath(); ?>dungeonpack1/screenshot1.png" data-fancybox="gallery">
+                                <img src="<?php echo $this->getImgPath(); ?>dungeonpack1/screenshot1.png" class="w-100 shadow-1-strong rounded mb-4" alt="" />
+                            </a>
+                        </div>
+                        <div class="col-lg-4 mb-4 mb-lg-0">
+                            <a href="<?php echo $this->getImgPath(); ?>portfolio/thereturnofalexscreenshot.gif" data-fancybox="gallery">
+                                <img src="<?php echo $this->getImgPath(); ?>dungeonpack1/dungeon_pack_gif1.gif" class="w-100 shadow-1-strong rounded mb-4" alt="" />
+                            </a>
+                            <a href="<?php echo $this->getImgPath(); ?>dungeonpack1/dungeon_pack_gif3.gif" data-fancybox="gallery">
+                                <img src="<?php echo $this->getImgPath(); ?>dungeonpack1/dungeon_pack_gif3.gif" class="w-100 shadow-1-strong rounded mb-4" alt="" />
+                            </a>
+                        </div>
+                        <div class="col-lg-4 mb-4 mb-lg-0">
+                            <a href="<?php echo $this->getImgPath(); ?>dungeonpack1/screenshot3.png" data-fancybox="gallery">
+                                <img src="<?php echo $this->getImgPath(); ?>dungeonpack1/screenshot3.png" class="w-100 shadow-1-strong rounded mb-4" alt="" />
+                            </a>
+                            <a href="<?php echo $this->getImgPath(); ?>dungeonpack1/screenshot2.png" data-fancybox="gallery">
+                                <img src="<?php echo $this->getImgPath(); ?>dungeonpack1/screenshot2.png" class="w-100 shadow-1-strong rounded mb-4" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                    <form role="form" action="" method="post" id="dungeonPack1Form">
+                        <input type="hidden" name="save" value="1">
+                        <div class="row">
+                            <input type="text" class="form-control" name="nickname" placeholder="Nickname" aria-label="Name" required>
+                        </div>
+                        <div class="row">
+                            <input type="email" class="form-control" name="email" placeholder="E-mail" aria-label="E-mail" required>
+                        </div>
+                        <p class="lh-base">This information will ONLY be used to send you the download link and to keep in touch with updates on my work. <br>You can unsubscribe whenever you want.</p>
+                        <div class="row getlink">
+                            <button type="submit" class="btn btn-danger" id="getLink">Get the link</button>
+                        </div>
+                        <div id="sendingEmail" class="row getlink">
+                            Sending e-mail... Please wait.
+                        </div>
+                    </form>
+                    <?php endif; ?>	
+                </div>
+            </div>
+        </div>

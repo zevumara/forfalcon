@@ -1,0 +1,22 @@
+<?php if ($this->total_pages): ?>
+
+P&aacute;gina
+<?php if ($this->prev_page): ?>
+<a href="<?php echo $link . $this->prev_page; ?>/" id="prev">Anterior</a>
+<?php endif; ?>
+<ul>
+	<?php for ($i = 1; $i <= $this->total_pages; $i++): ?>
+	
+	<?php if ($this->current_page == $i): ?>
+	<li><a href="javascript:void(0);" class="focused" style="color: #F20000;"><?php echo $i; ?></a></li>
+	<?php else: ?>
+	<li><a href="<?php echo $link . $i; ?>/"><?php echo $i; ?></a></li>
+	<?php endif; ?>
+	
+	<?php endfor; ?>
+</ul>
+<?php if ($this->next_page): ?>
+<a href="<?php echo $link . $this->next_page; ?>/" id="next">Siguiente</a>
+<?php endif; ?>
+
+<?php endif; ?>

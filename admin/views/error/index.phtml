@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title><?php if (isset($this->title)){ echo $this->title; } ?></title>
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+		<link type="text/css" rel="stylesheet" href="<?php echo $this->getCssPath(); ?>style.css" />
+		<script type="text/javascript" src="<?php echo PUBLIC_URL; ?>js/jquery.js"></script>
+			
+	</head>
+
+	<body>
+		
+		<h1><?php echo $this->title; ?></h1>
+		<p><?php echo $this->error; ?></p>
+		
+	</body>
+</html>

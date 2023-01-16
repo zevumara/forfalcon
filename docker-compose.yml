@@ -1,0 +1,36 @@
+version: "3.1"
+services:
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_DATABASE: forfalcon
+      MYSQL_USER: docker
+      MYSQL_PASSWORD: local
+      MYSQL_ROOT_PASSWORD: local
+    volumes:
+      - persistent:/var/lib/mysql
+    networks:
+      - docker-lamp
+  www:
+    depends_on:
+      - db
+    build: .
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - 80:80
+    networks:
+      - docker-lamp
+  phpmyadmin:
+    depends_on:
+      - db
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - 8001:80
+    networks:
+      - docker-lamp
+networks:
+  docker-lamp:
+    driver: bridge
+volumes:
+  persistent:

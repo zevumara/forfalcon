@@ -1,0 +1,19 @@
+                <main class="container-fluid p-5">
+                    <?php $this->showMessages(); ?>
+
+                    <small class=""><?php echo $this->__localization['CONFIGURATION']; ?> > <?php echo $this->title; ?></small>
+                    <h1 class="mb-4"><?php echo $this->title; ?></h1>
+                    
+                    <form role="form" action="" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="save" value="1">
+                        <?php $this->inputEmail('email', $this->__localization['EMAIL'], 'required'); ?>
+                        <?php $this->inputText('username', $this->__localization['USERNAME'], 'required'); ?>
+                        <?php $this->inputPassword('password', $this->__localization['PASSWORD'], $this->__localization['PROFILE_PASSWORD_DESCRIPTION']); ?>
+                        <?php $this->inputText('name', $this->__localization['NAME']); ?>
+                        <?php $this->inputPassword('newPassword', $this->__localization['NEW_PASSWORD']); ?>
+                        <?php $this->inputPassword('repeatNewPassword', $this->__localization['REPEAT_NEW_PASSWORD']); ?>
+                        <div class="pt-3">
+                            <button type="submit" class="btn btn-primary btn-lg shadow"><?php echo $this->__localization['SAVE']; ?></button>
+                        </div>
+                    </form>
+                </main>
