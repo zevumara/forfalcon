@@ -29,7 +29,7 @@ POO and MVC pattern with a clean and organized architecture.
 
 ## About this project
 
-Forfalcon was developing mainly as a personal practice for learning and aplying concepts, but keeping in mind of making something fully functiontal and useful in real cases.
+Forfalcon was developed mainly as a personal practice to learn and apply concepts, but thinking of making something fully functional and useful in real cases.
 
 ## Usage exmaples
 
