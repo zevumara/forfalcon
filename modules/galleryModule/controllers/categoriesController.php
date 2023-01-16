@@ -63,7 +63,8 @@ class categoriesController extends Controller
 				$this->getPostInt('active')
 			);
 			
-			$this->redirect('module/gallery/categories/edit/'. $id . '/12/');
+			//$this->redirect('module/gallery/categories/edit/'. $id . '/12/');
+			$this->redirect('module/gallery/categories/');
 		}
 		
 		$this->view->addFlag('new-category');

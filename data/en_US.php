@@ -58,6 +58,7 @@ $localization = array(
 	'REPEAT_NEW_PASSWORD'						=> 'Repeat new password',
 	'PROFILE_PASSWORD_DESCRIPTION'				=> 'You moust enter the password in case you need to change your e-mail, username or password.',
 	'NAME'										=> 'Name',
+	'STATUS'									=> 'Status',
 	'SAVE'										=> 'Save',
 	'CLEAN'										=> 'Clean',
 	'OPTIONS'									=> 'Options',

@@ -68,7 +68,7 @@
 						<div class="collapse navbar-collapse" id="navbarSupportedContent">
 							<ul class="navbar-nav ms-auto mt-2 mt-lg-0">
 								<li class="nav-item"><a class="nav-link" href="<?php echo ROOT_URL; ?>"><?php echo $this->__localization['PUBLIC_VIEW']; ?></a></li>
-								<li class="nav-item"><a class="nav-link" href="<?php echo URL; ?>"><?php echo $this->__localization['CONFIGURATION']; ?></a></li>
+								<li class="nav-item"><a class="nav-link" href="<?php echo URL; ?>"><?php echo $this->__localization['MODULES']; ?></a></li>
 								<li class="nav-item"><a class="nav-link" href="<?php echo URL; ?>profile/"><?php echo $this->__localization['PROFILE']; ?></a></li>
 								<li class="nav-item"><a class="nav-link" href="<?php echo URL; ?>login/logout/"><?php echo $this->__localization['LOGOUT']; ?></a></li>
 							</ul>

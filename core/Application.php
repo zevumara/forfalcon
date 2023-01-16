@@ -24,7 +24,7 @@ class Application
                 Bootstrap::run($singleton->request);
 			}
 			catch (PDOException $exception) {
-				echo $exception->getMessage();
+                echo "LALAL";
 			}
 		}
 		catch (Exception $exception) {

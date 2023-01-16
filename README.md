@@ -28,5 +28,5 @@ Forfalcon was developing mainly as a personal practice for learning and aplying 
 
 ## Usage exmaples
 
-- [karaterosario.com](karaterosario.com): The site of my sensei's dojo
+- [karaterosario.com](http://karaterosario.com): The site of my sensei's dojo
 - zevamaru.com: My personal blog (under construction)

@@ -1,6 +1,6 @@
                 <main class="container-fluid p-5">
 					<small class=""><?php echo $this->title; ?> > <?php echo $this->__localization['LIST_OF_MODULES']; ?></small>
-					<h1 class="pb-3"><?php echo $this->title; ?></h1>
+					<h1 class="pb-3"><?php echo $this->__localization['LIST_OF_MODULES']; ?></h1>
 					<div class="input-group mb-3">
 						<span class="input-group-text" id="basic-addon1"><?php echo $this->__localization['FILTER']; ?>...</span>
                         <input class="form-control" type="search" aria-label="Search" id="searchInput">
@@ -11,8 +11,8 @@
                             <caption><span id="count"><?php echo count($this->modules) + count($this->modulesNotInstalled); ?></span> <?php echo $this->__localization['RECORDS_FOUNDED']; ?></caption>
                             <thead class="thead-dark">
                                 <tr>
-                                    <th scope="col"><?php echo $this->__localization['Name']; ?></th>
-                                    <th scope="col"><?php echo $this->__localization['Status']; ?></th>
+                                    <th scope="col"><?php echo $this->__localization['NAME']; ?></th>
+                                    <th scope="col"><?php echo $this->__localization['STATUS']; ?></th>
                                     <th scope="col" width="40%"></th>
                                 </tr>
                             </thead>

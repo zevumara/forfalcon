@@ -73,7 +73,8 @@ class recordsController extends Controller
 				$this->getPostInt('active')
 			);
 			
-			$this->redirect('module/gallery/records/edit/'. $id . '/12/');
+			//$this->redirect('module/gallery/records/edit/'. $id . '/12/');
+			$this->redirect('module/gallery/records/');
 		}
 		
 		$this->view->addFlag('new-record');
