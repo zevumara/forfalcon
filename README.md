@@ -1,6 +1,6 @@
 # Forcalcon
 
-Simple and robust Content Managed System for fast-paced web development.
+Simple and robust Content Management System for fast-paced web development.
 
 
 https://user-images.githubusercontent.com/343548/212760571-2554f846-d395-49f4-be17-f82191b77a43.mp4
