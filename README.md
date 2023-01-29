@@ -13,7 +13,7 @@ Made with PHP and MySQL, easy to install on any low-cost shared hosting.
 
 ## Robust
 
-POO and MVC pattern with a clean and organized architecture.
+OOP and MVC pattern with a clean and organized architecture.
 
 ## Fast-paced develoment
 
