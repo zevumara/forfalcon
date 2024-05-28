@@ -34,4 +34,3 @@ Forfalcon was developed mainly as a personal practice to learn and apply concept
 ## Usage exmaples
 
 - [karaterosario.com](http://karaterosario.com): The site of my sensei's dojo
-- zevamaru.com: My personal blog (under construction)
